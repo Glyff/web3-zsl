@@ -52,8 +52,8 @@ export declare class Zsl {
   createShielding(rho: string, pk: string, value: Number): Promise<Shielding>
   createUnshielding(rho: string, sk: string, value: Number, treeIndex: string, authPath: string): Promise<Unshielding>
   createShieldedTransfer(
-    hro_1: string, sk_1: string, value_1: Number, treeIndex_1: Number, authPath_1: string,
-    hro_2: string, sk_2: string, value_2: Number, treeIndex_2: Number, authPath_2: string,
+    hro_1: string, sk_1: string, value_1: Number, treeIndex_1: Number, authPath_1: string[],
+    hro_2: string, sk_2: string, value_2: Number, treeIndex_2: Number, authPath_2: string[],
     out_rho_1: string, zaddr: string, out_value_1: Number,
     out_rho_2: string, out_pk_2: string, out_value_2: Number
   ): Promise<ShieldedTransfer>
