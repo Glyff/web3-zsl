@@ -11,3 +11,5 @@ web3.zsl.getRandomness().then(function (rho) {
       console.log({cm: cm})
     })
 })
+
+web3.zsl.generateZKeypair().then(console.log)
