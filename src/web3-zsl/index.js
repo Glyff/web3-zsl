@@ -16,11 +16,11 @@ import ZslModuleFactory from './factories/ZslModuleFactory'
  *
  * @returns {Zsl}
  */
-export const Zsl = (provider, accounts, options) => {
+export const Zsl = (provider, options) => {
   return new ZslModuleFactory(Utils, formatters).createZslModule(
     provider,
     new ProvidersModuleFactory(),
-    new MethodModuleFactory(accounts),
+    new MethodModuleFactory(),
     new Network(provider, options),
     options,
   )

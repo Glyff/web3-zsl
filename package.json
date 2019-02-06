@@ -1,12 +1,32 @@
 {
   "name": "web3-zsl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ZSL extension for Web3",
-  "main": "index.js",
-  "repository": "ssh://git@gitlab.smartex.io:2200/glyff/web3-zsl.git",
+  "main": "dist/web3-zsl.cjs.js",
+  "repository": "git@github.com:Glyff/web3-zsl.git",
   "author": "Vedmant <vedmant@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
   "dependencies": {
-    "web3": "^1.0.0-beta.34"
-  }
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/runtime": "^7.3.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-json": "^3.1.0",
+    "web3": "1.0.0-beta.41"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ]
 }

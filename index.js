@@ -1,5 +1,7 @@
 "use strict"
 
+var Web3 = require('web3')
+
 var version = require('web3/package.json').version
 var core = require('web3-core')
 var Eth = require('web3-eth')
@@ -8,7 +10,7 @@ var Personal = require('web3-eth-personal')
 var Shh = require('web3-shh')
 var Bzz = require('web3-bzz')
 var utils = require('web3-utils')
-var Zsl = require('./lib/zsl')
+var Zsl = require('./src/zsl')
 
 var Web3 = function Web3 () {
   var _this = this

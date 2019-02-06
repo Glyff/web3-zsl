@@ -24,17 +24,14 @@ export default class ZslModuleFactory {
    * @param {Network} net
    * @param {Object} options
    *
-   * @returns {Personal}
+   * @returns {Zsl}
    */
-  createZsllModule (provider, providersModuleFactory, methodModuleFactory, net, options) {
+  createZslModule (provider, providersModuleFactory, methodModuleFactory, net, options) {
     return new Zsl(
       provider,
       providersModuleFactory,
       methodModuleFactory,
       this.createMethodFactory(methodModuleFactory),
-      net,
-      this.utils,
-      this.formatters,
       options,
     )
   }

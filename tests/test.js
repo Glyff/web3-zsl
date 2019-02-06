@@ -1,4 +1,4 @@
-const Web3 = require('./dist/index')
+const Web3 = require('../')
 
 const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8546'))
 
