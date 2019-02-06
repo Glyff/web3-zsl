@@ -1,7 +1,6 @@
-const Web3 = require('./index')
-const BN = require('bn.js')
+const Web3 = require('./dist/index')
 
-const web3 = new Web3(new Web3.providers.HttpProvider("http://10.10.4.20:18545"))
+const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8546'))
 
 web3.zsl.getRandomness().then(function (rho) {
   console.log({rho: rho})

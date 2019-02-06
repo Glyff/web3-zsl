@@ -1,7 +1,7 @@
 const Web3 = require('./index')
 const BN = require('bn.js')
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://10.10.4.20:8545'))
+const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:8545'))
 
 // Workaround to check if is connected asyncronously
 web3.currentProvider.send({id: 9999999999, jsonrpc: '2.0', method: 'net_listening', params: []}, (err, result) => {
