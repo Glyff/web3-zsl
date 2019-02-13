@@ -8,9 +8,17 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "test": "DEBUG=app:*,test jest --runInBand --testNamePattern"
   },
   "dependencies": {
+    "web3": "1.0.0-beta.41"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
@@ -18,15 +26,15 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
     "@babel/runtime": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "co": "^4.6.0",
+    "cross-env": "^5.2.0",
+    "debug": "^4.1.1",
+    "jest": "^24.1.0",
     "rollup": "^1.1.2",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-cleanup": "^3.1.1",
-    "rollup-plugin-json": "^3.1.0",
-    "web3": "1.0.0-beta.41"
-  },
-  "files": [
-    "dist",
-    "index.d.ts"
-  ]
+    "rollup-plugin-json": "^3.1.0"
+  }
 }
