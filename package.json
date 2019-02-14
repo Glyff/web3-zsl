@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "DEBUG=app:*,test jest --runInBand --testNamePattern"
+    "test": "DEBUG=app:*,test jest --bail --forceExit --runInBand --testNamePattern"
   },
   "dependencies": {
     "web3": "1.0.0-beta.41"
