@@ -67,7 +67,8 @@ describe('shield unshield', () => {
 
       debug('Waiting for comfirmation')
       tokenContract.events.LogShielding({}, (err, event) => {
-        debug('Recieved LogShielding event', event.returnValues)
+        debug('Recieved LogShielding event')
+        debug({err, event})
         expect(err).toBeFalsy()
         expect(event.returnValues.from).toBe(config.address)
         expect(event.returnValues.uuid).toBe(note.uuid)
@@ -92,7 +93,7 @@ describe('shield unshield', () => {
       debug('Generating proof finished')
 
       const hash = yield new Promise((resolve, reject) => {
-        tokenContract.methods.unshield(unsh.proof, unsh.send_nf, cm, root, note.value.toNumber())
+        tokenContract.methods.unshield(unsh.proof, unsh.spend_nf, cm, root, note.value.toNumber())
           .send({from: config.address, gas: 200000})
           .once('transactionHash', (hash) => resolve(hash))
           .on('error', err => reject(err))
@@ -103,7 +104,7 @@ describe('shield unshield', () => {
 
       debug('Waiting for comfirmation')
       tokenContract.events.LogUnshielding({}, (err, event) => {
-        debug('Recieved LogUnshielding event', event.returnValues)
+        debug('Recieved LogUnshielding event')
         debug({err, event})
 
         expect(err).toBeFalsy()

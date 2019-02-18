@@ -6,7 +6,7 @@ import BN from 'bn.js'
 const debug = require('debug')('test')
 const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://' + config.host + ':' + config.port))
 
-describe('verify unshield', () => {
+describe.skip('verify unshield', () => {
   let tokenContract
   let tracker
   let note
