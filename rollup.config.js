@@ -33,9 +33,9 @@ const config = [
               targets: {
                 node: '6',
                 browsers: 'last 2 versions'
-              }
-            }
-          ]
+              },
+            },
+          ],
         ],
         plugins: [
           '@babel/plugin-proposal-export-default-from',
@@ -43,35 +43,14 @@ const config = [
           ["@babel/plugin-transform-runtime", {
             "helpers": true,
             "regenerator": true
-          }]
-        ]
+          }],
+        ],
       }),
       json(),
       autoExternal(),
       cleanup(),
-    ]
-  },
-  {
-    input: 'src/index.js',
-    output: [
-      {
-        file: 'dist/web3-zsl.esm.js',
-        format: 'es'
-      }
     ],
-    plugins: [
-      babel({
-        exclude: 'node_modules/**',
-        plugins: [
-          '@babel/plugin-proposal-export-default-from',
-          '@babel/plugin-proposal-export-namespace-from'
-        ]
-      }),
-      json(),
-      autoExternal(),
-      cleanup(),
-    ]
-  }
-];
+  },
+]
 
 export default config
