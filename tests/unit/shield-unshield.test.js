@@ -70,13 +70,14 @@ describe('shield unshield', () => {
         debug('Recieved LogShielding event')
         debug({err, event})
         expect(err).toBeFalsy()
-        expect(event.returnValues.from).toBe(config.address)
+        expect(event.returnValues.value).toBe(note.value.toString())
         expect(event.returnValues.uuid).toBe(note.uuid)
+        expect(event.returnValues.from).toBe(config.address)
         note.confirmed = true
         done()
       })
 
-      expect.assertions(3)
+      expect.assertions(4)
     })
   }, 300000)
 
@@ -108,8 +109,9 @@ describe('shield unshield', () => {
         debug({err, event})
 
         expect(err).toBeFalsy()
-        expect(event.returnValues.from).toBe(config.address)
+        expect(event.returnValues.value).toBe(note.value.toString())
         expect(event.returnValues.uuid).toBe(note.uuid)
+        expect(event.returnValues.from).toBe(config.address)
         done()
       })
 
@@ -118,3 +120,4 @@ describe('shield unshield', () => {
   }, 400000)
 
 })
+AbiCoder
