@@ -80,7 +80,7 @@ class CreateShielding extends AbstractCallMethod {
 
 class CreateUnshielding extends AbstractCallMethod {
   constructor (utils, formatters) {
-    super('zsl_createUnshielding', 5, utils, formatters)
+    super('zsl_createUnshielding', 6, utils, formatters)
   }
 }
 
@@ -104,7 +104,7 @@ class VerifyShielding extends AbstractCallMethod {
 
 class VerifyUnshielding extends AbstractCallMethod {
   constructor (utils, formatters) {
-    super('zsl_verifyUnshielding', 4, utils, formatters)
+    super('zsl_verifyUnshielding', 5, utils, formatters)
   }
 }
 
