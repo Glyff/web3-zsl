@@ -76,7 +76,6 @@ describe('shield unshield', () => {
         note.confirmed = true
         done()
       })
-
       expect.assertions(4)
     })
   }, 300000)
@@ -120,4 +119,3 @@ describe('shield unshield', () => {
   }, 400000)
 
 })
-AbiCoder
