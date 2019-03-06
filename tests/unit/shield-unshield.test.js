@@ -114,7 +114,7 @@ describe('shield unshield', () => {
         done()
       })
 
-      expect.assertions(3)
+      expect.assertions(4)
     })
   }, 400000)
 
