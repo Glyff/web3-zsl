@@ -1,7 +1,7 @@
-import babel from 'rollup-plugin-babel';
-import json from 'rollup-plugin-json';
-import autoExternal from 'rollup-plugin-auto-external';
-import cleanup from 'rollup-plugin-cleanup';
+import babel from 'rollup-plugin-babel'
+import json from 'rollup-plugin-json'
+import autoExternal from 'rollup-plugin-auto-external'
+import cleanup from 'rollup-plugin-cleanup'
 
 const config = [
   {
@@ -40,10 +40,29 @@ const config = [
         plugins: [
           '@babel/plugin-proposal-export-default-from',
           '@babel/plugin-proposal-export-namespace-from',
-          ["@babel/plugin-transform-runtime", {
-            "helpers": true,
-            "regenerator": true
-          }],
+          ['@babel/plugin-transform-runtime', {'helpers': true, 'regenerator': true}],
+        ],
+      }),
+      json(),
+      autoExternal(),
+      cleanup(),
+    ],
+  },
+  {
+    input: 'src/index.js',
+    output: [
+      {
+        file: 'dist/web3-zsl.esm.js',
+        format: 'es',
+      },
+    ],
+    plugins: [
+      babel({
+        exclude: 'node_modules/**',
+        babelrc: false,
+        plugins: [
+          '@babel/plugin-proposal-export-default-from',
+          '@babel/plugin-proposal-export-namespace-from',
         ],
       }),
       json(),

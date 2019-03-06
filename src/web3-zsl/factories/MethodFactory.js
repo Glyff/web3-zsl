@@ -1,4 +1,4 @@
-import {AbstractMethod, AbstractMethodFactory, GetGasPriceMethod, GetTransactionCountMethod, VersionMethod} from 'web3-core-method'
+import {AbstractMethod, AbstractMethodFactory} from 'web3-core-method'
 
 class AbstractCallMethod extends AbstractMethod {
   constructor (rpcMethod, parametersAmount, utils, formatters$$1) {
@@ -80,7 +80,7 @@ class CreateShielding extends AbstractCallMethod {
 
 class CreateUnshielding extends AbstractCallMethod {
   constructor (utils, formatters) {
-    super('zsl_createUnshielding', 6, utils, formatters)
+    super('zsl_createUnshielding', 5, utils, formatters)
   }
 }
 

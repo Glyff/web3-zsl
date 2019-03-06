@@ -1,6 +1,6 @@
 {
   "name": "web3-zsl",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "ZSL extension for Web3",
   "main": "dist/web3-zsl.cjs.js",
   "repository": "git@github.com:Glyff/web3-zsl.git",
